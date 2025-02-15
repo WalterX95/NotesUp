@@ -1,0 +1,12 @@
+[
+    {
+        "id": 0,
+        "label": "Home",
+        "link" : "/home"
+    },
+    {
+        "id": 1,
+        "label":"Crea Nota",
+        "link":"/create-note"
+    }
+]
