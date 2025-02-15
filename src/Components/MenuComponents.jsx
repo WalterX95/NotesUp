@@ -1,6 +1,7 @@
 import {Container, Nav, Navbar } from "react-bootstrap";
 import { BrowserRouter, Routes, Route } from "react-router";
 import CreateNote from "./CreateNote";
+import { Link } from "react-router-dom";
 
 const MenuComponent = ({title}) => {
      return (
@@ -10,14 +11,18 @@ const MenuComponent = ({title}) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-            <Nav.Link className="text-white" href="#features">Features</Nav.Link>
             <BrowserRouter>
-            <Routes>
-                    <Route index element={<CreateNote/>} />
-                    <Route path="about" element={<></>} />
-                    
+                  <Nav className="bg-dark p-3">
+                    <Nav.Link as={Link} to="about" className="text-white">
+                      Features
+                    </Nav.Link>
+                  </Nav>
+
+                  <Routes>
+                    <Route index element={<></>} />
+                    <Route path="about" element={<CreateNote />} />
                   </Routes>
-            </BrowserRouter>
+    </BrowserRouter>
             </Nav>
           </Navbar.Collapse>
         </Container>
