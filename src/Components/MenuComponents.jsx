@@ -14,15 +14,14 @@ const MenuComponent = ({title}) => {
             <BrowserRouter>
                   <Nav className="bg-dark p-3">
                     <Nav.Link as={Link} to="about" className="text-white">
-                      Features
+                      Crea Nota
                     </Nav.Link>
                   </Nav>
-
-                  <Routes>
+                 <Routes>
                     <Route index element={<></>} />
                     <Route path="about" element={<CreateNote />} />
                   </Routes>
-    </BrowserRouter>
+             </BrowserRouter>
             </Nav>
           </Navbar.Collapse>
         </Container>
